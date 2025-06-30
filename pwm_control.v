@@ -6,7 +6,7 @@ module PWM_Control #(
     input  wire rst_n,
     output wire [7:0] leds
 );
-    localparam integer PWM_CLK_PERIOD = CLK_FREQ / PWM_FREQ;
+    localparam [15:0] PWM_CLK_PERIOD = CLK_FREQ / PWM_FREQ;
     localparam integer PWM_DUTY_CYCLE = 50; // 0.0025% duty cycle
 
     localparam SECOND         = CLK_FREQ;
